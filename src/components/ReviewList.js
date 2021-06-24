@@ -1,5 +1,6 @@
 import React from 'react';
 import Review from './Review';
+import ReviewForm from './ReviewForm';
 const ReviewList = (props) => {
 	return (
 		<div>
@@ -9,6 +10,7 @@ const ReviewList = (props) => {
 				<Review title={review.title} reviewer={review.reviewer} rating={review.rating} review={review.review}/>
 			</div>  
                 )}
+            <ReviewForm />
 			
 		</div>
 	);
