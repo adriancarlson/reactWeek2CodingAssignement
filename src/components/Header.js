@@ -1,7 +1,7 @@
 const Header = () => {
 	return (
 		<header>
-			<h1 className='mb-4'>Movie Ratings</h1>
+			<h1 className='mb-4'>Star Wars Movie Ratings</h1>
 		</header>
 	);
 };

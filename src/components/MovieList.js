@@ -6,7 +6,6 @@ const MovieList = () => {
         <div className="card">
             <div className="card-body">
                 <Movie />
-                <Movie />
             </div>
         </div>
     )

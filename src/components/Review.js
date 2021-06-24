@@ -1,18 +1,18 @@
 import React from 'react';
 
-const Review = () => {
+const Review = (props) => {
 	return (
 		<div>
 			<div>
-				<div className='card mb-3' style={{ maxWidth: '800px' }}>
+				<div className='card' >
 					<div className='row g-0'>
-						<div className='col-md-8'>
+						<div className='col-md-12'>
 							<div className='card-body'>
-								<h5 className='card-title'>Review Title</h5>
+								<h5 className='card-title'>{props.title}</h5>
 								<p className='card-text'>
-									<small className='text-muted'>Username</small>
+									<small className='text-muted'>{props.reviewer}</small>
 								</p>
-								<p className='card-text'>This movie is the best.</p>
+								<p className='card-text'>{props.review}</p>
 							</div>
 						</div>
 					</div>
