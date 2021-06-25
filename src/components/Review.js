@@ -4,7 +4,7 @@ const Review = (props) => {
 	return (
 		<div>
 			<div>
-				<div className='card' >
+				<div className='card' key={props.id}>
 					<div className='row g-0'>
 						<div className='col-md-12'>
 							<div className='card-body'>

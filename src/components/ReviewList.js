@@ -7,7 +7,7 @@ const ReviewList = (props) => {
             <h5 className="m-3">Reviews:</h5>
             {props.reviews.map(review =>
                 <div className='card-body'>
-				<Review title={review.title} reviewer={review.reviewer} rating={review.rating} review={review.review}/>
+				<Review id= {review.id} title={review.title} reviewer={review.reviewer} rating={review.rating} review={review.review}/>
 			</div>  
                 )}
             <ReviewForm />
