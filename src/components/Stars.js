@@ -29,7 +29,7 @@ const MovieStars = (props) => {
 			<div>
 				<div>
 					{stars.map((_, index) => {
-						return <FaStar size={26} style={{ marginRight: 10 }} color={props.rating > index ? colors.orange : colors.grey} />;
+						return <FaStar size={20} style={{ marginRight: 10 }} color={props.rating > index ? colors.orange : colors.grey} />;
 					})}
 				</div>
 			</div>
