@@ -68,7 +68,7 @@ const Movie = () => {
 	//Add Review
 	const addReview = (review) => {
 		const id = Math.floor(Math.random() * 10000) + 1;
-
+		console.log(review);
 		const newReview = { id, ...review };
 		setReview([...reviews, newReview]);
 	};

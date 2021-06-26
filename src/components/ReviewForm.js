@@ -3,7 +3,7 @@ import Stars from './Stars';
 import { useState } from 'react';
 
 const ReviewForm = (props) => {
-	const [userName, setUserName] = useState('');
+	const [reviewer, setReviewer] = useState('');
 	const [rating, setRating] = useState('');
 	const [title, setTitle] = useState('');
 	const [review, setReview] = useState('');
@@ -16,8 +16,8 @@ const ReviewForm = (props) => {
 			return;
 		}
 
-		props.onAdd({ userName, title, review, movieId, rating });
-		setUserName('');
+		props.onAdd({ reviewer, title, review, movieId, rating });
+		setReviewer('');
 		setTitle('');
 		setRating('');
 		setReview('');
@@ -36,7 +36,7 @@ const ReviewForm = (props) => {
 				<label htmlFor='reviewerInput' className='form-label'>
 					Your Username
 				</label>
-				<input type='text' className='form-control' id='reviewerInput' value={userName} onChange={(e) => setUserName(e.target.value)} />
+				<input type='text' className='form-control' id='reviewerInput' value={reviewer} onChange={(e) => setReviewer(e.target.value)} />
 			</div>
 			<div className='mb-3'>
 				<label htmlFor='rating' className='form-label'>
