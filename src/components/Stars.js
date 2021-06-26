@@ -29,12 +29,13 @@ const MovieStars = (props) => {
 			<div>
 				<div>
 					{stars.map((_, index) => {
-						return <FaStar size={20} style={{ marginRight: 10 }} color={props.rating > index ? colors.orange : colors.grey} />;
+						return <FaStar key={index} size={20} style={{ marginRight: 10 }} color={props.rating > index ? colors.orange : colors.grey} />;
 					})}
 				</div>
 			</div>
 		);
 	} else {
+		props.onStarRating(currentValue);
 		return (
 			<div>
 				<div>
@@ -47,7 +48,7 @@ const MovieStars = (props) => {
 								onClick={() => handelClick(index + 1)}
 								color={(hoverValue || currentValue) > index ? colors.orange : colors.grey}
 								onMouseOver={() => handelMouseOver(index + 1)}
-								OnMouserLeave={handleMouseLeave}
+								onMouseLeave={handleMouseLeave}
 							/>
 						);
 					})}

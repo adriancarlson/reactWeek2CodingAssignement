@@ -64,6 +64,15 @@ const Movie = () => {
 				'The Empire Strikes Back is the best film in the original Star Wars trilogy. It has all the great qualities that the original Star Wars has: great effects (at the time of its release), appealing characters, and lots of spellbinding action.',
 		},
 	]);
+
+	//Add Review
+	const addReview = (review) => {
+		const id = Math.floor(Math.random() * 10000) + 1;
+
+		const newReview = { id, ...review };
+		setReview([...reviews, newReview]);
+	};
+
 	return (
 		<div>
 			{moviesArray.map((movie) => (
@@ -81,7 +90,7 @@ const Movie = () => {
 								</p>
 								<p className='card-text'>{movie.synopsis}</p>
 							</div>
-							<ReviewList reviews={reviews} movieId={movie.id} />
+							<ReviewList key={movie.id} onAdd={addReview} reviews={reviews} movieId={movie.id} />
 						</div>
 					</div>
 				</div>

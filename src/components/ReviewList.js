@@ -11,7 +11,7 @@ const ReviewList = (props) => {
 					<Review id={review.id} title={review.title} reviewer={review.reviewer} rating={review.rating} review={review.review} />
 				</div>
 			))}
-			<ReviewForm />
+			<ReviewForm onAdd={props.onAdd} movieId={props.movieId} />
 		</div>
 	);
 };
